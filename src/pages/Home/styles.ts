@@ -85,3 +85,27 @@ export const Separator = styled.div`
   display: flex;
   justify-content: center;
 `
+export const StartCountdownButton = styled.button`
+  padding: 1.25rem 1.25rem;
+  width: 100%;
+  background: ${(props) => props.theme['green-500']};
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  color: ${(props) => props.theme['gray-100']};
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme['green-700']};
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+`
