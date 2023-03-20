@@ -18,47 +18,46 @@ export const HomeContainer = styled.main`
 export const FormContainer = styled.div`
   width: 100%;
   color: ${(props) => props.theme['gray-100']};
+  font-weight: 700;
   font-size: 1.125rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+`
 
-  label {
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1.6;
+const BaseInput = styled.input`
+  padding: 0 0.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid ${(props) => props.theme['gray-500']};
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: ${(props) => props.theme['gray-100']};
+
+  &::placeholder {
+    color: ${(props) => props.theme['gray-500']};
   }
 
-  input[type='text'] {
-    padding: 0.688rem 0.5rem;
-    width: 17rem;
-    background: ${(props) => props.theme['gray-800']};
-    border: 0;
-    border-bottom: 2px solid ${(props) => props.theme['gray-500']};
-    font-weight: 700;
-
-    &::placeholder {
-      color: ${(props) => props.theme['gray-500']};
-    }
+  &:focus {
+    box-shadow: none;
+    border-color: ${(props) => props.theme['green-500']};
   }
+`
 
-  input[type='number'] {
-    padding: 0.5rem 0;
-    width: 4.5rem;
-    background: ${(props) => props.theme['gray-800']};
-    border: 0;
-    border-bottom: 2px solid ${(props) => props.theme['gray-500']};
-    font-weight: 700;
-    text-align: center;
-  }
+export const TaskInput = styled(BaseInput)`
+  flex: 1;
 
-  span {
-    font-weight: 700;
-    line-height: 1.6;
-    color: ${(props) => props.theme['gray-100']};
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
   }
+`
+
+export const MinutesAmountInput = styled(BaseInput)`
+  width: 4rem;
+  text-align: center;
 `
 
 export const CountdownContainer = styled.div`
