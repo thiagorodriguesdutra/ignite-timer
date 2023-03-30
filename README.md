@@ -22,4 +22,4 @@
     - Zod
     - Date-fns
 
-- [Acesse o projeto aqui](https://thiagorodriguesdutra.github.io/ignite-timer/)
+- [Acesse o projeto aqui](https://ignite-timer-gilt-three.vercel.app/)
