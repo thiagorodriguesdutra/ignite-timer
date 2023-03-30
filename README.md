@@ -10,7 +10,7 @@
     - ReactJS
       - React Hook Form
       - React Router Dom
-    Hooks:
+    - Hooks:
       - useState
       - useEffect
       - useContext
